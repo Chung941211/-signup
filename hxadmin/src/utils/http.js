@@ -60,32 +60,13 @@ const handleErrorStatus = function (res) {
   return Promise.reject(res)
 }
 
-const DEBUGREG = /(|&|\?)debug=([^&]+)?/
-
 export default {
   post (url, data, config) {
-    if (process.env.NODE_ENV === 'development') {
-      if (config && config.headers && config.headers['Content-Type'] === 'application/x-www-form-urlencoded') {
-        if (!DEBUGREG.test(data)) {
-          data += '&debug=1'
-        }
-      } else {
-        if (data.debug === undefined) {
-          data.debug = urlParams.debug || 1
-        }
-      }
-    }
     console.log(url, 'url in post')
     let _config = Object.assign({}, {data: data, url: url, method: 'post'}, config)
     return axios(_config).then(checkStatus).then(checkCode)
   },
   get (url, data, config) {
-    if (process.env.NODE_ENV === 'development') {
-      data = data || {}
-      if (data.debug === undefined) {
-        data.debug = urlParams.debug || 1
-      }
-    }
     let _config = Object.assign({}, {params: data, method: 'get', url: url}, config)
     return axios(_config).then(checkStatus).then(checkCode)
   }
