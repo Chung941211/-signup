@@ -1,6 +1,6 @@
 # app
 
-> 火星小程序
+> 一个基于mpvue的小程序
 
 ## Build Setup
 
