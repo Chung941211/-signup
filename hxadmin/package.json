@@ -147,7 +147,7 @@
         "webpack-hot-middleware": "^2.18.0",
         "webpack-manifest-plugin": "^1.1.0",
         "webpack-merge": "^4.1.0",
-        "xlsx": "^0.11.10",
+        "xlsx": "^0.17.0",
         "zrender": "3.5.2"
     },
     "engines": {
