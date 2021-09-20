@@ -148,7 +148,7 @@
         "webpack-manifest-plugin": "^1.1.0",
         "webpack-merge": "^4.1.0",
         "xlsx": "^0.11.10",
-        "zrender": "3.5.2"
+        "zrender": "5.2.1"
     },
     "engines": {
         "node": ">= 4.0.0",
