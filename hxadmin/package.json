@@ -19,7 +19,7 @@
     "dependencies": {
         "axios": "^0.16.1",
         "element": "^0.1.4",
-        "element-theme": "^0.7.2",
+        "element-theme": "^2.0.1",
         "element-theme-default": "^1.4.4",
         "element-ui": "^2.5.0",
         "fastclick": "^1.0.6",
